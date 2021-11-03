@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TerrainMeshGenerator.gd" type="Script" id=1]
+[ext_resource path="res://heightmap.bmp" type="Texture" id=2]
+[ext_resource path="res://Terrain.gd" type="Script" id=3]
+
+[sub_resource type="Environment" id=1]
+ambient_light_color = Color( 0.568627, 0.568627, 0.568627, 1 )
+
+[node name="Main" type="Spatial"]
+
+[node name="Terrain" type="Spatial" parent="."]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Terrain"]
+script = ExtResource( 1 )
+heightmap = ExtResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 11.5, 20 )
+current = true
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.609702, 0.197954, -0.767514, 0.124667, 0.980209, 0.153777, 0.782765, -0.00192522, -0.622314, -5.30616, 13.6245, 0.0808287 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
