@@ -1,2 +1,3 @@
 # HeightmapTerrain_Godot
-A heightmap terrain using the Godot game engine.
+<p>A godot version of Riemer's MonoGame Terrain Tutorial<p>
+<p>https://github.com/simondarksidej/XNAGameStudio/wiki/Riemers3DXNA1Terrainoverview<p>
